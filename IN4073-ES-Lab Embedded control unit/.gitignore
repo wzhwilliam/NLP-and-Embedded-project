@@ -1,0 +1,13 @@
+.DS_Store
+in4073/pc_terminal/pc-terminal
+in4073/joystick example/jstest
+.vscode/settings.json
+in4073/_build
+.vs/
+in4073/implot-master
+in4073/imgui-master/examples
+in4073/pc_gui/drone_pc_gui
+in4073/pc_gui/*.o
+in4073/pc_gui/*.ini
+in4073/pc_gui/*.txt
+in4073/pc_terminal/*.txt

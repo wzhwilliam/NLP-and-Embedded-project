@@ -1,0 +1,11 @@
+FROM ubuntu:20.04
+
+RUN apt-get update && apt-get install -y locales build-essential python2 wget && rm -rf /var/lib/apt/lists/* \
+    && localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
+ENV LANG en_US.utf8
+
+RUN wget https://bootstrap.pypa.io/pip/2.7/get-pip.py && python2.7 get-pip.py  && rm get-pip.py
+RUN pip install pyserial
+RUN mkdir /opt/in4073
+
+

@@ -1,0 +1,11 @@
+{
+  "name": "in4073-es-lab-embedded-control-unit",
+  "version": "1.0.0",
+  "description": "This is the Embedded Systems Laboratory repository of Thursday's group 12. \r Tha main code of the drone can be found in \"in4073.c\" file. The communication protocol is implemented in \r comm.c from the drone side and in protocol.c from the PC side. Also two different PC programs are provided,\r there is a basic terminal program in pc_terminal folder and there is an application with simple GUI in pc_gui.\r Using the Makefile in in4073 folder can compile both sides, upload the code to the drone and run the terminal \r program by \"make upload-run\" or the GUI by \"make upload-gui-run\".",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

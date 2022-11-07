@@ -1,0 +1,7 @@
+/.idea/
+/.DS_Sore
+/payment-service/target/
+/order-service/target/
+/stock-service/target/
+/eureka-server/target/
+/feign-api/target/

@@ -1,0 +1,46 @@
+server:
+  port: 8082
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/Stock?useSSL=false
+    #      jdbc:postgresql://database-1:cxbgmrby1kdy:eu-central-1:rds:amazonaws:com:5432/Stock?useSSL=false:
+    username: postgres
+    password: postgresql
+    driver-class-name: org.postgresql.Driver
+  application:
+    name: stock-service
+  main:
+    allow-circular-references: true
+mybatis:
+  type-aliases-package: WDM.pojo
+  configuration:
+    map-underscore-to-camel-case: true
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8088/eureka
+
+seata:
+  tx-service-group: eurekaserver-seata-service-group
+  service:
+    vgroupMapping:
+      eurekaserver-seata-service-group: default
+    grouplist:
+      default: 127.0.0.1:8091
+  enabled: true
+  data-source-proxy-mode: AT
+  client:
+    rm:
+      lock:
+        retry-times: 30
+        retry-interval: 100
+  application-id: ${spring.application.name}
+
+feign:
+  httpclient:
+    enabled: true
+    max-connections: 200
+    max-connections-per-route: 50
+#    connection-timeout: 60000
+#    connection-timer-repeat: 3000

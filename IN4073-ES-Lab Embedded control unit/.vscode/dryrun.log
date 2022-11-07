@@ -1,0 +1,6 @@
+make --dry-run --keep-going --print-directory
+make: Entering directory '/home/philip/projects/IN4073-ES-Lab'
+make: Leaving directory '/home/philip/projects/IN4073-ES-Lab'
+ 
+make: *** No targets specified and no makefile found.  Stop.
+

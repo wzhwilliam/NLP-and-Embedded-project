@@ -1,0 +1,22 @@
+server:
+  port: 8088
+spring:
+  application:
+    name: eureka-server
+  main:
+    allow-circular-references: true
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    service-url:
+      defaultZone: http://localhost:8088/eureka/
+seata:
+  tx-service-group: eurekaserver-seata-service-group
+  service:
+    vgroupMapping:
+      eurekaserver-seata-service-group: default
+    grouplist:
+      default: 127.0.0.1:8091
+  enabled: true
+  data-source-proxy-mode: AT
